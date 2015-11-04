@@ -1,0 +1,92 @@
+body
+{
+	background-color: #efefef;
+}
+
+
+.dice
+{
+	float:left;
+	width:320px;
+	text-align: center;
+	margin-left: 10%;
+	font-size: 80;
+	color: #525252;
+	font-family: verdana;
+}
+span
+{
+	
+	color:#a1a1a1;
+}
+span.active
+{
+	
+	color: #0000aa;
+
+}
+
+
+table.field
+{
+	/*width: 280px;
+	height: 520px;*//*shahard.html*/
+	width:320px;/*shahard2.html*/
+	border-collapse: collapse;
+	/*border: 5px ridge #bcbcbc;*/
+	margin-left: 10%;
+	margin-top: 5%;
+	table-layout: fixed;
+	text-align: center;
+
+}
+td
+{
+	/*width:20 px;
+	height: 20 px;*//*shahard.html*/
+	background-color: #e1e1e1;
+	border: 2px dotted #a1a1a1;
+
+	
+}
+
+tr:last-child > td, tr:first-child > td, td:last-child, td:first-child
+{
+
+	border:none!important;
+	background-color: #EEEEEE;
+	width:20 px;
+	height: 20 px;
+}
+
+tr:first-child > td, td:last-child 
+{
+	color: #a1a1a1;
+
+}
+
+tr:last-child > td,   td:first-child
+{
+	color:#232323;
+}
+
+tr:nth-child(13)>td
+{
+	border-bottom: 2px solid #525252;
+	
+}
+
+
+
+.blue
+{
+	background-color: #0000FF;
+	border: 2px solid #0000aa!important;
+
+}
+.red
+{
+	
+	background-color: #FF0000;
+	border: 2px solid #aa0000!important;
+}
