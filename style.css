@@ -1,19 +1,86 @@
 body
 {
 	background-color: #efefef;
+	min-width: 750px;
 }
 
+div.left-menu
+{
+	background-color: #303030;
+	border-right: 4px solid #656565;
+	height: 100%;
+	width: auto;
+	display:inline;
+	float:left;
+	box-shadow: 0 0 5px #000000;
+	margin-left:-10;
+	margin-top: -10;
+	padding-bottom: -100;
+
+}
+
+/*
+div.error
+{
+	border: 2px solid red;
+	background-color: #ffcccc;
+	box-shadow: 0 0 5px 5px #ffcccc;
+	font-size: 20;
+	font-family: arial;
+	padding: 20px;
+	/*margin-left: 10%;
+	margin-right:10%;
+	margin-top:20px;
+	color:#cc0000;
+	width:auto;
+	display:inline;
+
+}
+*/
 
 .dice
 {
-	float:left;
-	width:320px;
+	margin-top:10%;
+	margin-left: 20px;
+	display:inline-block;
+	width: 200px;
 	text-align: center;
-	margin-left: 10%;
 	font-size: 80;
 	color: #525252;
 	font-family: verdana;
 }
+.go_btn
+{
+	margin-top: 20px;
+	color:#FFFFFF;
+	height: 80px;
+	opacity:0.8;
+	cursor: pointer;
+	border-radius: 8px;
+	font-size: 65;
+   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+   background: linear-gradient(to bottom, #0000ff, #0000aa);
+}
+
+.go_btn:hover
+{
+	   box-shadow: 0 0 20px rgb(0,0,255);
+	   /*opacity:0.8;*/
+}
+
+.go_btn_disable
+{
+	background: linear-gradient(to bottom, #a1a1a1, #525252);
+	color:#bfbfbf;
+	cursor: default;
+	/*opacity:0.8;*/	
+}
+.go_btn_disable:hover
+{
+box-shadow: 0 0 10px rgba(0,0,0,0.5);
+ }
+
+
 span
 {
 	
@@ -31,11 +98,13 @@ table.field
 {
 	/*width: 280px;
 	height: 520px;*//*shahard.html*/
-	width:320px;/*shahard2.html*/
+	width:335px;/*shahard2.html*/
 	border-collapse: collapse;
 	/*border: 5px ridge #bcbcbc;*/
+	display:inline-table;
+	float:left;
 	margin-left: 10%;
-	margin-top: 5%;
+	margin-top: 2%;
 	table-layout: fixed;
 	text-align: center;
 
