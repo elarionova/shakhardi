@@ -1,23 +1,52 @@
 body
 {
 	background-color: #efefef;
-	min-width: 750px;
+	min-width: 800px;
+	margin: 0;
 }
 
 div.left-menu
 {
 	background-color: #303030;
-	border-right: 4px solid #656565;
-	height: 100%;
+	opacity: 0.7;
+	/*border-right: 4px solid #656565;
+	border-bottom: 4px solid #656565;
+	border-radius: 0px 0px 8px 0px;*/
 	width: auto;
-	display:inline;
+	height: 100%;
+	max-width: 200px;
+	display:inline; 
 	float:left;
 	box-shadow: 0 0 5px #000000;
-	margin-left:-10;
-	margin-top: -10;
-	padding-bottom: -100;
-
 }
+ul.menu
+{
+	font-family: verdana;
+	color: #dedede;
+	list-style-type: none;
+	padding: 0; 
+/*	margin: 10px;*/
+	margin-bottom:0px;
+	margin-top:0px;
+}
+li
+{
+	padding: 15px 20px 15px 20px;
+	border-bottom: 1px solid #e1e1e1;
+	text-align: left;
+	max-width: 150px;
+}
+li:last-child
+{
+	border:none;
+}
+li:hover 
+{
+	cursor: pointer;
+	background-color: #565656;
+	color: #ffffff;
+}
+
 
 /*
 div.error
@@ -41,12 +70,21 @@ div.error
 .dice
 {
 	margin-top:10%;
+	/*margin-left: 20px;
+	display:inline-block;
+	width: 200px;
+	text-align: center;*/
+	font-size: 80;
+	color: #525252;
+	font-family: verdana;
+}
+
+.right_block
+{
 	margin-left: 20px;
 	display:inline-block;
 	width: 200px;
 	text-align: center;
-	font-size: 80;
-	color: #525252;
 	font-family: verdana;
 }
 .go_btn
@@ -86,13 +124,17 @@ span
 	
 	color:#a1a1a1;
 }
-span.active
+span.active_blue
 {
 	
 	color: #0000aa;
 
 }
 
+span.active_red
+{
+	color: #aa0000;
+}
 
 table.field
 {
@@ -103,7 +145,7 @@ table.field
 	/*border: 5px ridge #bcbcbc;*/
 	display:inline-table;
 	float:left;
-	margin-left: 10%;
+	margin-left: 5%;
 	margin-top: 2%;
 	table-layout: fixed;
 	text-align: center;
@@ -115,7 +157,9 @@ td
 	height: 20 px;*//*shahard.html*/
 	background-color: #e1e1e1;
 	border: 2px dotted #a1a1a1;
-
+	user-select: none;
+	-webkit-user-select: none;
+	cursor: default;
 	
 }
 
@@ -158,4 +202,22 @@ tr:nth-child(13)>td
 	
 	background-color: #FF0000;
 	border: 2px solid #aa0000!important;
+}
+
+.selected-blue
+{
+	background-color: #ccccff;
+	border: 2px solid #AAAAFF!important;
+	cursor: pointer;
+}
+
+.enabled-yellow
+{
+	background-color: #FAFCB6;/*F0E38D;*/
+	border: 2px dotted #DEAF2F!important;
+}
+.enabled-yellow:hover 
+{
+	background-color: #EEF26F;
+	cursor: pointer;
 }
