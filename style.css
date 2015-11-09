@@ -87,10 +87,20 @@ div.error
 	text-align: center;
 	font-family: verdana;
 }
+.timer
+{
+	color:#525252;
+	float:right;
+	display:inline;
+	margin-top:2%;
+	font-size: 20px;
+	font-family: verdana;
+
+}
 .go_btn
 {
 	margin-top: 20px;
-	color:#FFFFFF;
+	color:#cfcfcf;
 	height: 80px;
 	opacity:0.8;
 	cursor: pointer;
@@ -136,6 +146,35 @@ span.active_red
 	color: #BA0D21;
 }
 
+.player
+{
+	margin-top: 2%;
+	margin-left:8%;
+	font-family: verdana;
+	font-size: 20px;
+	color: #BA0D21;
+	display:inline;
+	width:260px;
+	text-align: left;
+	float:left;
+;
+}
+.player_2
+{
+	color: #0000aa;
+
+}
+.player_out
+{
+	color: #a1a1a1;
+}
+div.leftside
+{
+	float:left;
+	margin: 30px;
+	height:100%;
+	width:350px;
+}
 table.field
 {
 	/*width: 280px;
@@ -143,10 +182,11 @@ table.field
 	width:335px;/*shahard2.html*/
 	border-collapse: collapse;
 	/*border: 5px ridge #bcbcbc;*/
-	display:inline-table;
-	float:left;
+	/*display:inline-table;*/
+	/*float:left;*/
 	margin-left: 5%;
 	margin-top: 2%;
+	margin-bottom: 5%;
 	table-layout: fixed;
 	text-align: center;
 
