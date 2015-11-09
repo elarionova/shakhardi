@@ -97,7 +97,7 @@ div.error
 	border-radius: 8px;
 	font-size: 65;
    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-   background: linear-gradient(to bottom, #0000ff, #0000aa);
+   background: linear-gradient(to bottom, #0D4ABA, #0000aa);
 }
 
 .go_btn:hover
@@ -133,7 +133,7 @@ span.active_blue
 
 span.active_red
 {
-	color: #aa0000;
+	color: #BA0D21;
 }
 
 table.field
@@ -193,22 +193,30 @@ tr:nth-child(13)>td
 
 .blue
 {
-	background-color: #0000FF;
+	background-color: #0D4ABA;
 	border: 2px solid #0000aa!important;
 
 }
 .red
 {
 	
-	background-color: #FF0000;
-	border: 2px solid #aa0000!important;
+	background-color: #BA0D21;
+	border: 2px solid #780613!important;
+}
+
+.highlighted-blue
+{
+	background-color: #1664F2;/*#77C4ED;#4680EB;*/
+	border: 2px solid #0045C4!important;
+	cursor: pointer;
 }
 
 .selected-blue
 {
-	background-color: #ccccff;
-	border: 2px solid #AAAAFF!important;
-	cursor: pointer;
+	background-color: #1664F2;/*#4680EB;*/
+	border: 2px solid #6E9EF5!important;
+	box-shadow: 0 0 15px #77C4ed;
+	cursor: pointer;	
 }
 
 .enabled-yellow

@@ -4,7 +4,7 @@ var Chip = function(field, coords) {
 
   this.cRedClass = 'red';
   this.cBlueClass = 'blue'
-  this.cHighlightedBlue = 'selected-blue';
+  this.cHighlightedBlue = 'highlighted-blue';
   this.cSelectedBlueClass = 'selected-blue';
   this.cEnabledYellowClass = 'enabled-yellow';
 
