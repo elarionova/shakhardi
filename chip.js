@@ -69,6 +69,15 @@ Chip.prototype.appendClickListener = function(el, style) {
         this.field.showStepsForChip.bind(this.field, this.coords));
     return this.cHighlightedBlue;
   }
+  if (this.flagged = this.SELECTED) {
+    el.addEventListener('click', this.deselect.bind(this));
+    return this.cSelectedBlueClass;
+  }
+}
+
+Chip.prototype.deselect = function() {
+  this.field.removeShownStpes();
+  this.highlight();
 }
 
 Chip.prototype.highlight = function() {

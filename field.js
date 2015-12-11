@@ -59,7 +59,7 @@ Field.prototype.render = function() {
 
 
   while (this.fieldElement.firstChild) {
-        this.fieldElement.removeChild(this.fieldElement.firstChild);
+    this.fieldElement.removeChild(this.fieldElement.firstChild);
   }
   this.fieldElement.appendChild(firstRow);
   for (var counter = 0; counter < this.cFieldHeight; ++counter)
@@ -154,8 +154,19 @@ Field.prototype.removeShownStpes = function() {
   for (var y = 0; y < this.cFieldHeight; ++y) {
     for (var x = 0; x < this.cFieldWidth; ++x) {
       var chip = this.model[y][x];
-      if (chip.getType() == Chip.prototype.NONE) {
+      if (chip.isEmpty()) {
         chip.clean();
+      }
+    }
+  }
+}
+
+Field.prototype.removeSelectedChips = function() {
+  for (var y = 0; y < this.cFieldHeight; ++y) {
+    for (var x = 0; x < this.cFieldWidth; ++x) {
+      var chip = this.model[y][x];
+      if (chip.isBlue() && chip.isSelected()) {
+        chip.highlight();
       }
     }
   }
@@ -163,6 +174,7 @@ Field.prototype.removeShownStpes = function() {
 
 Field.prototype.showStepsForChip = function(coords) {
   this.removeShownStpes();
+  this.removeSelectedChips();
   this.model[coords.y][coords.x].select();
   var columnData = this.collectColumn(coords.x);
   var margin = Math.min(this.cFieldHeight,
