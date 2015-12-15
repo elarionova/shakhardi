@@ -224,7 +224,11 @@ class Field {
     this.MoveChip(coords_from, coords_to);
     return coords_from;
   }
-  CheckEatenChips() {
+  CheckEatenChips(): Base.EatenChips {
+    var total_eaten = {
+      red: 0,
+      blue: 0
+    };
     for (var y = 0; y < Field.kFieldHeight; ++y) {
       var blue_number = 0;
       var red_number = 0;
@@ -247,12 +251,18 @@ class Field {
         for (var x = 0; x < Field.kFieldWidth; ++x) {
           var chip = this.model_[y][x];
           if (chip.GetType() == type_to_remove) {
+            if (chip.IsRed) {
+              ++total_eaten.red;
+            } else if (chip.IsBlue()){
+              ++total_eaten.blue;
+            }
             chip.Clean();
             chip.SetType(ChipType.kEmpty);
           }
         }
       }
     }
+    return total_eaten;
   }
   private ChipTypeFromRow(row: number): ChipType {
     return row % 2 ? ChipType.kRed : ChipType.kBlue;

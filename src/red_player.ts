@@ -3,21 +3,24 @@
 /// <reference path="./player.ts"/>
 
 class RedPlayer extends Player {
-  constructor(field: any, dices: Dices) {
-    super(field, dices);
+  private can_reshuffle_: boolean;
+  constructor(field: Field, dices: Dices, mode_manager: Mode.Manager) {
+    super(field, dices, mode_manager);
     this.is_blue_ = false;
+    this.can_reshuffle_ = true;
+  }
+
+  GetRowFromDice(dice: number): number {
+    return Field.kFieldWidth - (dice - 1) * 2 - 1;
   }
 
   StartTurn(): void {
-    setTimeout(this.StartTurnInner.bind(this), 1000);
+    setTimeout(this.StartTurnInner.bind(this), 500);
   }
 
-  StartTurnInner(should_reshuffle: boolean): void {
-    this.OnTurnStarted();
-
+  StartTurnInner(): void {
     var made_move: Base.MoveData = null;
-
-    var possible_moves: [Base.MoveData] = [
+    const possible_moves: [Base.MoveData] = [
       {
         row: this.GetRowFromDice(this.dices_.GetFirstDice()),
         steps: this.dices_.GetSecondDice()
@@ -34,10 +37,11 @@ class RedPlayer extends Player {
       }
     });
 
-    if (!made_move && should_reshuffle) {
+    if (!made_move && this.can_reshuffle_) {
       this.dices_.Shuffle();
-      return this.StartTurnInner(true);
+      return this.StartTurnInner();
     } else if (made_move) {
+      this.can_reshuffle_ = false;
       this.dices_.Decrement(made_move);
     } else {
       // If we already made some moves, but can no longer continue(no free chips
@@ -59,5 +63,10 @@ class RedPlayer extends Player {
       }
     }
     return null;
+  }
+
+  OnTurnEnded(): void {
+    super.OnTurnEnded();
+    this.can_reshuffle_ = true;
   }
 }

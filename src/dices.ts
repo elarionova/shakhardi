@@ -93,6 +93,7 @@ class Dices {
     this.GetActivePlayer().OnTurnEnded();
     this.blue_player_turn_ = !this.blue_player_turn_;
     this.Shuffle();
+    this.GetActivePlayer().OnTurnStarted();
     this.GetActivePlayer().StartTurn();
   }
 }

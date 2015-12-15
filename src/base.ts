@@ -9,4 +9,9 @@ module Base {
     row: number;
     steps: number;
   }
+
+  export interface EatenChips {
+    red: number;
+    blue: number;
+  }
 }

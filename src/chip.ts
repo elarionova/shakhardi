@@ -1,4 +1,5 @@
 /// <reference path="./base.ts"/>
+/// <reference path="./field.ts"/>
 /// <reference path="./player.ts"/>
 
 enum ChipType {
@@ -20,12 +21,12 @@ class Chip {
   private static kSelectedBlueClass = 'selected-blue';
   private static kEnabledYellowClass = 'enabled-yellow';
 
-  private field_: any;
+  private field_: Field;
   private coords_: Base.Point;
   private type_: ChipType;
   private flagged_: ChipState;
 
-  constructor(field: any, coords: Base.Point) {
+  constructor(field: Field, coords: Base.Point) {
     this.field_ = field;
     this.coords_ = coords;
 
@@ -68,26 +69,6 @@ class Chip {
     return el;
   }
 
-  AppendClickListener(el: HTMLElement, style: string): string {
-    if (this.IsEmpty()) {
-      el.addEventListener('click',
-          this.field_.MakeStep.bind(this.field_, this.coords_));
-      return style;
-    }
-
-    // From here on we work with BLUE only:
-    if (this.flagged_ == ChipState.kHighlight) {
-      el.addEventListener('click',
-          this.field_.ShowStepsForChip.bind(this.field_, this.coords_));
-      return Chip.kHighlightedBlue;
-    }
-    if (this.flagged_ = ChipState.kSelected) {
-      el.addEventListener('click', this.Deselect.bind(this));
-      return Chip.kSelectedBlueClass;
-    }
-    return '';
-  }
-
   Deselect() {
     this.field_.RemoveShownSteps();
     this.Highlight();
@@ -112,5 +93,25 @@ class Chip {
   SetFlag(flag: ChipState) {
     this.flagged_ = flag;
     this.field_.RenderWhenIdle();
+  }
+
+  private AppendClickListener(el: HTMLElement, style: string): string {
+    if (this.IsEmpty()) {
+      el.addEventListener('click',
+          this.field_.MakeStep.bind(this.field_, this.coords_));
+      return style;
+    }
+
+    // From here on we work with BLUE only:
+    if (this.flagged_ == ChipState.kHighlight) {
+      el.addEventListener('click',
+          this.field_.ShowStepsForChip.bind(this.field_, this.coords_));
+      return Chip.kHighlightedBlue;
+    }
+    if (this.flagged_ = ChipState.kSelected) {
+      el.addEventListener('click', this.Deselect.bind(this));
+      return Chip.kSelectedBlueClass;
+    }
+    return '';
   }
 }
