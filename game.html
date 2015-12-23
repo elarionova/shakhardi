@@ -2,6 +2,11 @@
   <head>
     <title></title>
     <link rel="stylesheet" type="text/css" href="style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="style/menu.css"/>
+    <link rel="stylesheet" type="text/css" href="style/table.css"/>
+    <link rel="stylesheet" type="text/css" href="style/dices.css"/>
+    <link rel="stylesheet" type="text/css" href="style/player.css"/>
+    <link rel="stylesheet" type="text/css" href="style/popup.css"/>
     <script src="script/game.js" async></script>
   </head>
   <body>
@@ -9,25 +14,117 @@
     <!--<div class="error">You cannot do this step!</div>-->
     <div class="left-menu">
       <ul class="menu">
-        <li>New Game</li>
-        <li>Play with..</li>
-        <li>Save</li>
-        <li>Share</li>
-        <li>Demo</li>
-        <li>Sign up</li>
-        <li>Bye!</li>
+           <div class="submenu">
+            <li>New Game </li>
+            <div class="submenu_cell">
+            <form> 
+               
+               <label for="play_bot">
+                 <input type="radio" name="play" id="play_bot">
+                  Play with bot
+                </label>
+               
+               <label for="play_player">
+                 <input type="radio" name="play" id="play_player">
+                 Play with player
+                 <input type="text" class="submenu_input" name="player_name" placeholder="Type your name">
+                </label>
+               <hr size="1" color="#696969">
+               
+               <label for="watch">
+                 <input type="checkbox" id="watch">
+                 Watchable
+                </label>
+               <hr size="1" color="#696969">
+               
+               <label for="mod_1" >
+                 <input type="radio" name="mod" id="mod_1">
+                 Mod #1
+                </label>
+               
+               <label for="mod_2" >
+                 <input type="radio" id="mod_2" name="mod">
+                 Mod #2
+                </label>
+            </form>
+            </div>
+          </div>
+          
+            <li>G-Gallery</li>
+           
+          <div class="submenu">
+            <li>Save Game </li>
+            <div class="submenu_cell_mobile">
+              Olololo!
+            </div>
+          </div>
+          <div class="submenu">
+            <li>Share</li>
+            <div class="submenu_cell_mobile">
+              Olololo!
+            </div>
+          </div>
+          <div class="submenu">
+            <li>Login</li>
+            <div class="submenu_cell">
+              <form>
+                <input class="submenu_input" name="user_mail" placeholder="Type your email">
+              </form>
+            </div>
+          </div>
+          <div class="submenu">
+            <li>Registration</li>
+            <div class="submenu_cell">
+              <form>
+                <input class="submenu_input" name="user_mail" placeholder="Type your email">
+                <input class="submenu_input" name="user_name" placeholder="Type your name">
+                <label for="subscribe">
+                 <input type="checkbox" name="subscribe" id="subscribe">
+                  Ready to get mails from you
+                </label>
+              </form>
+              
+            </div>
+          </div>
+            <div class="submenu">
+              <li>About</li>
+              <div class="submenu_cell">
+               <h3>Shakhards' Rules</h3>
+                <h4>Lorem</h4>
+                 Lorem ipsum dolor sit amet. Pellentesque non ultrices neque, ac condimentum libero. Quisque auctor nisi at convallis lacinia. Ut at congue turpis, non rhoncus orci. Maecenas eu nisl id felis accumsan pretium nec a nisi. Praesent varius suscipit semper. Nulla vel volutpat sapien. Praesent vel ante auctor, aliquet nibh sed, interdum dui. Maecenas tincidunt pulvinar ipsum, quis hendrerit nunc auctor eget.
+                <h4>Ipsum</h4>
+                 Lorem ipsum dolor sit amet
+                <h4>Dolor</h4>
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed ante urna. Duis malesuada ligula.
+                <h4>Sit</h4>
+               Lorem ipsum dolor sit amet
+            <h4>Amet</h4>
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non arcu quis neque cursus aliquet. Suspendisse sit amet ipsum vitae urna ullamcorper ullamcorper sed vel ligula. Morbi in porta sapien.
+              </div>
+            
+            </div>
+          
+     
+        
       </ul>
     </div>
-    <div class="leftside">
-      <div class="player player_out">Very Long Player Name 1: <b>100</b> (off)</div>
-      <div class="timer">11:55</div>
-      <table class="field"></table>
-      <div class="player player_2">Name 2: <b>500</b></div>
-      <div class="timer">11:55</div>
+    <div class="game_wrapper">
+      <div class="leftside">
+        <div class="player player_out">Very Long Player Name 1: <b>100</b> (off)</div>
+        <div class="timer">11:55</div>
+        <table class="field"></table>
+        <div class="player player_2">Name 2: <b>500</b></div>
+        <div class="timer">11:55</div>
+      </div>
+  
+      <div class="right_block">
+       <!-- <span class="active_blue"></span>|<span class="active_red"></span>-->
+        <div class="dice active_red dice_5"></div>
+        <div class="dice active_blue dice_6"></div>
+        
+      </div>
     </div>
-
-    <div class="dice right_block">
-      <span class="active_blue"></span>|<span class="active_red"></span>
-    </div>
+    
+    
     </body>
 </html>

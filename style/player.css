@@ -1,0 +1,32 @@
+.timer
+{
+	color:#525252;
+	float:right;
+	display:inline;
+	margin-top:2%;
+	font-size: 20px;
+	font-family: verdana;
+
+}
+
+.player
+{
+	margin-top: 2%;
+	margin-left:8%;
+	font-family: verdana;
+	font-size: 20px;
+	color: #BA0D21;
+	display:inline;
+	width:260px;
+	text-align: left;
+	float:left;
+}
+.player_2
+{
+	color: #0000aa;
+
+}
+.player_out
+{
+	color: #a1a1a1;
+}

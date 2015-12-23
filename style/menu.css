@@ -1,0 +1,86 @@
+div.left-menu
+{
+	background-color: #696969;
+	left:0;
+	top:0;
+	position:absolute;
+	width: 150px;
+	height: 100%;
+	box-shadow: 0 0 5px #000000;
+}
+ul.menu
+{
+	font-family: verdana;
+	color: #dedede;
+	list-style-type: none;
+	padding: 0; 
+	margin-bottom:0px;
+	margin-top:0px;
+}
+li
+{
+	padding: 15px 20px 15px 20px;
+	border-bottom: 1px solid #e1e1e1;
+	text-align: left;
+	max-width: 150px;
+}
+li:last-child
+{
+	border:none;
+}
+li:hover 
+{
+	cursor: pointer;
+	background-color: #565656;
+	color: #ffffff;
+}
+
+.submenu:hover .submenu_cell
+{
+	display:block;
+}
+
+div.submenu
+{
+	/*background-color: #303030;*/
+	width:150px;
+	left:0;
+
+}
+div.submenu_cell_mobile
+{
+	background-color: #303030;
+	padding: 10px 5px;
+	max-width:190px;
+	border-bottom: 1px solid #e1e1e1;
+	display:none;
+}
+.submenu_cell
+{
+	position: absolute;
+	margin-left: 148px;
+	height: calc(100% - 9px);
+	overflow:auto;
+	width: 200px;
+	background-color: #565656;
+	top:0;
+	display:none;
+	box-shadow: 0 0 5px #000000;
+	padding: 10px 10px 0px 10px;
+}
+input.submenu_input
+{
+	margin: 10px 5px 0px 5px;
+	border: 1px solid #696969;
+	color: #efefef;
+	background-color: #565656;
+	width:160px;
+}
+input[name="player_name"]
+{
+	display:none;
+}
+#play_player:checked+input[name="player_name"]
+{
+	display:block;
+}
