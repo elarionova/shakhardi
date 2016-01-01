@@ -3,12 +3,32 @@ body
 	background-color: #efefef;
 	min-width: 650px;
 	margin: 0;
+	
 }
 
 label
 {
 	display:block;
 	padding: 10px 0px;
+}
+
+h1
+{
+	padding:5px 10px;
+	font-family:verdana;
+	color: #696969;
+	font-weight:300;
+}
+a
+{
+	text-decoration:none;
+	font-family: verdana;
+	font-weight:800;
+	color: #0D4ABA;
+}
+a:hover
+{
+	color:#1664F2;
 }
 /*
 div.error

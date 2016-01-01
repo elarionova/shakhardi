@@ -15,7 +15,7 @@ class RedPlayer extends Player {
   }
 
   StartTurn(): void {
-    setTimeout(this.StartTurnInner.bind(this), 500);
+    setTimeout(this.StartTurnInner.bind(this), 1000);
   }
 
   StartTurnInner(): void {

@@ -175,7 +175,7 @@ class Field {
 
   CreateTd(value: number, id?: string): HTMLTableCellElement {
     var el = document.createElement('td');
-    el.innerText = value ? String(value) : '';
+    el.innerHTML = value ? String(value) : '';
     el.id = id ? id : '';
     return el;
   }

@@ -1,0 +1,211 @@
+/*iPad in landscape*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { 
+    div.left-menu
+    {
+        width:200px;
+    }
+    li
+    {
+        width:200px;
+        max-width:160px;
+    }
+    div.submenu
+    {
+        width:200px;
+        
+    }
+    div.submenu_cell
+    {
+    	background-color: #303030;
+    	padding: 10px 5px;
+    	max-width:199px;
+    	border-bottom: 1px solid #e1e1e1;
+    	display:none;
+    	height:auto;
+    	width:189px;
+    	margin-left:0;
+    	position:relative;
+    	
+    }
+ 
+    .submenu:last-child>.submenu_cell
+    {
+    position: absolute;
+	margin-left: 200px;
+	height: calc(100% - 9px);
+	overflow:auto;
+	width: 200px;
+	background-color: #565656;
+	top:0;
+	box-shadow: 0 0 5px #000000;
+	padding: 10px 10px 0px 10px;
+    }
+}
+
+/*iPad in portrait*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait){
+    div.left-menu
+    {
+        width:200px;
+        font-size:20px;
+    }
+    li
+    {
+        width:200px;
+        max-width:160px;
+    }
+    div.submenu
+    {
+        width:200px;
+        
+    }
+    div.submenu_cell
+    {
+    	background-color: #303030;
+    	padding: 10px 5px;
+    	max-width:199px;
+    	border-bottom: 1px solid #e1e1e1;
+    	display:none;
+    	height:auto;
+    	width:189px;
+    	margin-left:0;
+    	position:relative;
+    	
+    }
+ 
+    .submenu:last-child>.submenu_cell
+    {
+    position: absolute;
+	margin-left: 200px;
+	height: calc(100% - 9px);
+	overflow:auto;
+	width: 100%;
+	background-color: #565656;
+	top:0;
+	box-shadow: 0 0 5px #000000;
+	padding: 10px 10px 0px 10px;
+    }
+}
+
+
+/*Galaxy Note, Galaxy S5 in landscape*/
+@media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : landscape) { 
+    div.submenu_cell
+    {
+    	background-color: #303030;
+    	padding: 10px 5px;
+    	max-width:190px;
+    	border-bottom: 1px solid #e1e1e1;
+    	display:none;
+    }
+}
+
+/*Galaxy Note, Galaxy S5 in portrait*/
+@media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : portrait){
+    div.submenu_cell
+    {
+    	background-color: #303030;
+    	padding: 10px 5px;
+    	max-width:190px;
+    	border-bottom: 1px solid #e1e1e1;
+    	display:none;
+    }
+}
+
+/*Nexus 5X in landscape*/
+@media only screen and (min-device-width : 411px) and (max-device-width : 731px) and (orientation : landscape) { 
+    div.submenu_cell
+    {
+    	background-color: #303030;
+    	padding: 10px 5px;
+    	max-width:190px;
+    	border-bottom: 1px solid #e1e1e1;
+    	display:none;
+    }
+}
+
+/*Nexus 5X in portrait*/
+@media only screen and (min-device-width : 411px) and (max-device-width : 731px) and (orientation : portrait){
+    div.submenu_cell
+    {
+    	background-color: #303030;
+    	padding: 10px 5px;
+    	max-width:190px;
+    	border-bottom: 1px solid #e1e1e1;
+    	display:none;
+    }
+}
+
+
+/*iPhone 5 in landscape*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) { 
+    div.submenu_cell
+    {
+    	background-color: #303030;
+    	padding: 10px 5px;
+    	max-width:190px;
+    	border-bottom: 1px solid #e1e1e1;
+    	display:none;
+    }
+
+}
+
+/*iPhone 5 in portrait*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait){
+    div.submenu_cell
+    {
+    	background-color: #303030;
+    	padding: 10px 5px;
+    	max-width:190px;
+    	border-bottom: 1px solid #e1e1e1;
+    	display:none;
+    }
+}
+
+/*iPhone 6 in landscape*/
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) { 
+    div.submenu_cell
+    {
+    	background-color: #303030;
+    	padding: 10px 5px;
+    	max-width:190px;
+    	border-bottom: 1px solid #e1e1e1;
+    	display:none;
+    }
+}
+
+/*iPhone 6 in portrait*/
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait){
+    div.submenu_cell
+    {
+    	background-color: #303030;
+    	padding: 10px 5px;
+    	max-width:190px;
+    	border-bottom: 1px solid #e1e1e1;
+    	display:none;
+    }
+}
+
+/*iPhone 6+ in landscape*/
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : landscape) { 
+    div.submenu_cell
+    {
+    	background-color: #303030;
+    	padding: 10px 5px;
+    	max-width:190px;
+    	border-bottom: 1px solid #e1e1e1;
+    	display:none;
+    }
+}
+
+/*iPhone 6+ in portrait*/
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : portrait){
+    div.submenu_cell
+    {
+    	background-color: #303030;
+    	padding: 10px 5px;
+    	max-width:190px;
+    	border-bottom: 1px solid #e1e1e1;
+    	display:none;
+    }
+}

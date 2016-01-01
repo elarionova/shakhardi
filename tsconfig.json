@@ -6,6 +6,10 @@
     "preserveConstEnums": true,
     "out": "script/game.js",
     "sourceMap": true,
-    "sourceRoot": "src"
-  }
+    "sourceRoot": "../src/"
+  },
+  "exclude": [
+    "script/",
+    "style/"
+  ]
 }

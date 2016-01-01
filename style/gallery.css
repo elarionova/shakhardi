@@ -1,0 +1,36 @@
+div.gallery_cell
+{
+    display:inline-block;
+    width:150px;
+    height:150px;
+    padding:5px 10px;
+    margin-bottom:10px;
+    margin-left:5px;
+    border: 1px solid #696969;
+    text-align:center;
+    cursor:pointer;
+    vertical-align: top;
+}
+
+div.gallery_cell:hover
+{
+    background-color: #fefefe;
+}
+
+div.gallery_cell>p
+{
+    font-family: verdana;
+ 
+}
+
+p.date
+{
+    font-style: italic;
+    font-size:smaller;
+    color: #696969;
+}
+
+p.play_with
+{
+    color: #BA0D21;
+}

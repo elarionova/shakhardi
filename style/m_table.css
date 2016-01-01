@@ -1,0 +1,97 @@
+/*iPad in landscape*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { 
+.link_block_desktop
+{
+    display:none;
+}
+}
+
+/*iPad in portrait*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait){
+.link_block_desktop
+{
+    display:none;
+}
+}
+
+
+/*Galaxy Note, Galaxy S5 in landscape*/
+@media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : landscape) { 
+.link_block_desktop
+{
+    display:none;
+}
+}
+
+/*Galaxy Note, Galaxy S5 in portrait*/
+@media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : portrait){
+.link_block_desktop
+{
+    display:none;
+}
+}
+
+/*Nexus 5X in landscape*/
+@media only screen and (min-device-width : 411px) and (max-device-width : 731px) and (orientation : landscape) { 
+.link_block_desktop
+{
+    display:none;
+}
+}
+
+/*Nexus 5X in portrait*/
+@media only screen and (min-device-width : 411px) and (max-device-width : 731px) and (orientation : portrait){
+.link_block_desktop
+{
+    display:none;
+}
+}
+
+
+/*iPhone 5 in landscape*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) { 
+.link_block_desktop
+{
+    display:none;
+}
+}
+
+/*iPhone 5 in portrait*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait){
+.link_block_desktop
+{
+    display:none;
+}
+}
+
+/*iPhone 6 in landscape*/
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) { 
+.link_block_desktop
+{
+    display:none;
+}
+}
+
+/*iPhone 6 in portrait*/
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait){
+.link_block_desktop
+{
+    display:none;
+}
+}
+
+/*iPhone 6+ in landscape*/
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : landscape) { 
+.link_block_desktop
+{
+    display:none;
+}
+}
+
+/*iPhone 6+ in portrait*/
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : portrait){
+.link_block_desktop
+{
+    display:none;
+}
+}

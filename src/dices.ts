@@ -5,6 +5,10 @@ class Dices {
   private static kMaxDice = 6;
   private static kDiceClass = "dice";
 
+  private static kNumberedDices: string[] = [
+    "dice_1", "dice_2", "dice_3", "dice_4", "dice_5", "dice_6",
+  ];
+
   private dice_elements_: NodeList;
   private blue_player_turn_: boolean;
   private red_player_: Player;
@@ -15,7 +19,7 @@ class Dices {
   constructor() {
     this.blue_player_turn_ = true;
     const dice_elements = document.getElementsByClassName(Dices.kDiceClass);
-  	this.dice_elements_ = dice_elements.item(0).childNodes;
+    this.dice_elements_ = dice_elements;
     this.Shuffle();
   }
 
@@ -35,8 +39,19 @@ class Dices {
   }
 
   Render(): void {
-    this.dice_elements_.item(1).textContent = String(this.first_dice_);
-    this.dice_elements_.item(3).textContent = String(this.second_dice_);
+    this.RenderDice(this.dice_elements_.item(0), this.first_dice_);
+    this.RenderDice(this.dice_elements_.item(1), this.second_dice_);
+  }
+  RenderDice(element: Node, value: number): void {
+    var class_list = GetDivFromNode(element).classList;
+    // First remove all player/value classes.
+    Dices.kNumberedDices.forEach(class_name => {
+      class_list.remove(class_name);
+    });
+    class_list.remove("active_blue", "active_red");
+    // Then add current classes.
+    class_list.add(Dices.kNumberedDices[value - 1]);
+    class_list.add(this.blue_player_turn_ ? "active_blue" : "active_red");
   }
   GetValues(): [number] {
     return [this.first_dice_, this.second_dice_];
@@ -47,7 +62,6 @@ class Dices {
     this.second_dice_ = values[1];
     this.Render();
   }
-
   private GetRandom(): number {
     return Math.floor(Math.random() * Dices.kMaxDice) + Dices.kMinDice;
   }
@@ -63,7 +77,6 @@ class Dices {
         this.red_player_ != undefined);
     return this.blue_player_turn_ ? this.blue_player_ : this.red_player_;
   }
-
   GetMoveData(): [Base.MoveData] {
     return [
       {row: this.GetRowFromDice(this.first_dice_), steps: this.second_dice_},
@@ -96,4 +109,9 @@ class Dices {
     this.GetActivePlayer().OnTurnStarted();
     this.GetActivePlayer().StartTurn();
   }
+}
+
+
+function GetDivFromNode(node: Node): HTMLDivElement {
+  return <HTMLDivElement>node;
 }

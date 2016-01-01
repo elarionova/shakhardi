@@ -6,7 +6,7 @@
 	margin-top: 200px;
 	font-size: 80;
 	color: #525252;
-	width:105px;
+	width:calc(100% - 390px);
 }
 .dice
 {
